@@ -11,12 +11,13 @@ Join our Telegram group to stay updated and get instructions on how to use this 
 
 ## 🌟 Features
 
-| Feature             | Status | Description                                      |
-| ------------------- | ------ | ------------------------------------------------ |
-| Auto Check-in       | On/Off | Claim daily bonus to get more points             |
-| Auto Do Task        | On/Off | Complete tasks                                   |
-| Auto Play Hold Coin | On/Off | Play Hold Coin to get as many points as possible |
-| Auto Spin           | On/Off | Spin to get random reward                        |
+| Feature              | Status | Description                                       |
+| -------------------- | ------ | ------------------------------------------------- |
+| Auto Check-in        | On/Off | Claim daily bonus to get more points              |
+| Auto Do Task         | On/Off | Complete tasks                                    |
+| Auto Play Hold Coin  | On/Off | Play Hold Coin to get as many points as possible  |
+| Auto Spin            | On/Off | Spin to get random reward                         |
+| Auto Play Swipe Coin | On/Off | Play Swipe Coin to get as many points as possible |
 
 ## 🚀 Run File
 
