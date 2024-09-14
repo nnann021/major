@@ -6,7 +6,12 @@ from smart_airdrop_claimer import base
 from core.token import get_token
 from core.info import get_balance
 from core.task import process_check_in, process_do_task
-from core.reward import process_hold_coin, process_spin, process_swipe_coin
+from core.reward import (
+    process_hold_coin,
+    process_spin,
+    process_swipe_coin,
+    process_puzzle_durov,
+)
 
 import time
 
@@ -16,6 +21,7 @@ class Major:
         # Get file directory
         self.data_file = base.file_path(file_name="data.txt")
         self.config_file = base.file_path(file_name="config.json")
+        self.durov_file = base.file_path(file_name="durov.json")
 
         # Initialize line
         self.line = base.create_line(length=50)
@@ -42,6 +48,10 @@ class Major:
 
         self.auto_play_swipe_coin = base.get_config(
             config_file=self.config_file, config_name="auto-play-swipe-coin"
+        )
+
+        self.auto_play_puzzle_durov = base.get_config(
+            config_file=self.config_file, config_name="auto-play-puzzle-durov"
         )
 
     def main(self):
@@ -103,6 +113,19 @@ class Major:
                         else:
                             base.log(
                                 f"{base.yellow}Auto Play Swipe Coin: {base.red}OFF"
+                            )
+
+                        # Puzzle Durov
+                        if self.auto_play_puzzle_durov:
+                            base.log(
+                                f"{base.yellow}Auto Play Puzzle Durov: {base.green}ON"
+                            )
+                            process_puzzle_durov(
+                                token=token, durov_file=self.durov_file
+                            )
+                        else:
+                            base.log(
+                                f"{base.yellow}Auto Play Puzzle Durov: {base.red}OFF"
                             )
 
                         get_balance(token=token)
