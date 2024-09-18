@@ -1,6 +1,6 @@
 {
   "auto-check-in": "true",
-  "auto-do-task": "true",
+  "auto-do-task": "false",
   "auto-play-hold-coin": "true",
   "auto-spin": "true",
   "auto-play-swipe-coin": "true",
