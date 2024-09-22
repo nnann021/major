@@ -136,8 +136,8 @@ class Major:
                     base.log(f"{base.red}Error: {base.white}{e}")
 
             print()
-            wait_time = 300 * 300
-            base.log(f"{base.yellow}Wait for {int(wait_time/300)} minutes!")
+            wait_time = 120 * 120
+            base.log(f"{base.yellow}Wait for {int(wait_time/120)} minutes!")
             time.sleep(wait_time)
 
 
